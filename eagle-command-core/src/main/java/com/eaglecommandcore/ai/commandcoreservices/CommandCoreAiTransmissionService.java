@@ -6,15 +6,15 @@ import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.stereotype.Service;
 
-// CommandCoreAiCommService acts as the interface to AI-powered decision support systems,
+// CommandCoreAiTransmissionService acts as the interface to AI-powered decision support systems,
 // enabling tactical prompt submission and retrieval of strategic response data
 @Service
-public class CommandCoreCommsService {
+public class CommandCoreAiTransmissionService {
     // Language model interface for generating intelligence and command responses
     private final ChatModel chatModel;
 
     // Constructor injection providing the AI chat model for tactical communication
-    public CommandCoreCommsService(ChatModel chatModel) {
+    public CommandCoreAiTransmissionService(ChatModel chatModel) {
         // Initialize the service with the AI model responsible for command-level analysis
         this.chatModel = chatModel;
     }

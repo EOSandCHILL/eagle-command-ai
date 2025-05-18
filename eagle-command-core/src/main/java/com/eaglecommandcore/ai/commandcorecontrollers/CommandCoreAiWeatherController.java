@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.eaglecommandcore.ai.commandcoreservices.CommandCoreWeatherReportService;
+import com.eaglecommandcore.ai.commandcoreservices.CommandCoreAiWeatherReportService;
 
 /**
  * Controller providing AI-generated weather reports for military operations
@@ -15,10 +15,10 @@ import com.eaglecommandcore.ai.commandcoreservices.CommandCoreWeatherReportServi
 @RestController
 public class CommandCoreAiWeatherController {
 
-    private final CommandCoreWeatherReportService commandCoreAiWeatherService;
+    private final CommandCoreAiWeatherReportService commandCoreAiWeatherReportService;
 
-    public CommandCoreAiWeatherController(CommandCoreWeatherReportService commandCoreAiWeatherService) {
-        this.commandCoreAiWeatherService = commandCoreAiWeatherService;
+    public CommandCoreAiWeatherController(CommandCoreAiWeatherReportService commandCoreAiWeatherReportService) {
+        this.commandCoreAiWeatherReportService = commandCoreAiWeatherReportService;
     }
 
     /**
@@ -37,7 +37,7 @@ public class CommandCoreAiWeatherController {
                                         @RequestParam String mobilityType,
                                         @RequestParam String gearLoad) {
 
-        return commandCoreAiWeatherService.generateWeatherReport(
+        return commandCoreAiWeatherReportService.generateCommandCoreAiWeatherReport(
                 location, missionType, duration, startTime, altitudeLevel, terrainType, mobilityType, gearLoad
         );
     }

@@ -8,17 +8,17 @@ import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CommandCoreWeatherReportService {
+public class CommandCoreAiWeatherReportService {
     // This service simulates an AI-powered weather report generation to assist troops in operational planning
     private final ChatModel chatModel;
 
     // Constructor injection to provide the ChatModel dependency for tactical support
-    public CommandCoreWeatherReportService(ChatModel chatModel) {
+    public CommandCoreAiWeatherReportService(ChatModel chatModel) {
         // Assigning the injected ChatModel to the service's field for mission-critical operations
         this.chatModel = chatModel;
     }
 
-    public String generateWeatherReport(String location, String missionType, String duration,
+    public String generateCommandCoreAiWeatherReport(String location, String missionType, String duration,
                                         String startTime, String altitudeLevel, String terrainType,
                                         String mobilityType, String gearLoad) {
         var template = """
