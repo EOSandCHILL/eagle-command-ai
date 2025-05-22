@@ -10,6 +10,7 @@ function CommandCoreAiWeatherComponent() {
   const [mobilityType, setMobilityType] = useState("");
   const [gearLoad, setGearLoad] = useState("");
   const [weatherReport, setWeatherReport] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const generateCommandCoreAiWeatherReport = async () => {
     try {
@@ -164,6 +165,17 @@ function CommandCoreAiWeatherComponent() {
       </button>
       {weatherReport && (
         <div className="output">
+          <div className="output-header">
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(weatherReport);
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }}
+            >
+              {copied ? "Copied!" : "Copy Report"}
+            </button>
+          </div>
           <pre className="command-core-ai-weather-report-text">
             {weatherReport}
           </pre>
