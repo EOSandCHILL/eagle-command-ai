@@ -9,5 +9,4 @@ public class EagleCommandCoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EagleCommandCoreApplication.class, args);
 	}
-
 }

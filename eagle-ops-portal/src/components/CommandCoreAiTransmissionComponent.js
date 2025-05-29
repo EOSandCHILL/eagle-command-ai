@@ -25,7 +25,9 @@ function CommandCoreAiTransmissionComponent() {
 
   return (
     <div>
-      <h2>Command Core AI - Transmission</h2>
+      <div className="section-header">
+        <h2>Command Core AI - Transmission</h2>
+      </div>
       <input
         type="text"
         value={prompt}

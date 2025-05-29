@@ -40,7 +40,9 @@ function CommandCoreAiWeatherComponent() {
 
   return (
     <div>
-      <h2>Mission Weather Intel Report</h2>
+      <div className="section-header">
+        <h2>Mission Weather Intel Report</h2>
+      </div>
       <div className="form-group">
         <h4>Target Location</h4>
         <input
