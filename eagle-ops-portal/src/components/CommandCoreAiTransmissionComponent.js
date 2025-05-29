@@ -34,7 +34,10 @@ function CommandCoreAiTransmissionComponent() {
         onChange={(e) => setPrompt(e.target.value)}
         placeholder="Transmit mission directive or query"
       />
-      <button onClick={askCommandCoreAiTransmission}>
+      <button
+        className="generate-button"
+        onClick={askCommandCoreAiTransmission}
+      >
         Transmit to Command Core AI
       </button>
       <div className="output">

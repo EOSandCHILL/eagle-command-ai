@@ -6,24 +6,17 @@
   padding: 20px;
 }
 
-/* === Tabs === */
-.tabs {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.tabs button {
+/* === Tab Buttons === */
+.App > button:not(.mode-toggle) {
   padding: 10px 20px;
+  margin: 0 5px;
   cursor: pointer;
   border: none;
-  background-color: #f0f0f0;
+  background-color: #d4d4d4;
   font-weight: bold;
   border-radius: 3px;
-  margin: 0 5px;
 }
-
-.tabs button.active {
+.App > button:not(.mode-toggle).active {
   background-color: #007bff;
   color: #fff;
 }
@@ -70,15 +63,32 @@ input,
 button {
   padding: 10px 20px;
   cursor: pointer;
-  border: none;
-  background-color: #f0f0f0;
+  background-color: #d4d4d4;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: none;
+  border-style: none;
 }
 
 button.active {
   background-color: #007bff;
   color: #fff;
+}
+
+.mode-toggle {
+  margin-bottom: 19.92px;
+  border-radius: 3px;
+}
+
+.mode-toggle:hover {
+  border: 3px solid #666666;
+}
+
+.generate-button {
+  border-radius: 3px;
+}
+
+.generate-button:hover {
+  border: 3px solid #007bff;
 }
 
 .output-header {
@@ -108,7 +118,7 @@ button.active {
   background-color: #f4f4f4;
   padding: 10px;
   border-radius: 3px;
-  border: #000;
+  border: 1px solid #000;
 }
 
 .command-core-ai-weather-report-text {
@@ -150,15 +160,15 @@ body.dark-mode button {
   border: 1px solid #555;
 }
 
-body.dark-mode .tabs button {
+body.dark-mode .App > button:not(.mode-toggle) {
   background-color: #333;
   color: #fff;
   border: 1px solid #555;
 }
-
-body.dark-mode .tabs button.active {
-  background-color: #007bff;
-  color: #fff;
+body.dark-mode .App > button:not(.mode-toggle).active {
+  background-color: #007bff !important;
+  color: #fff !important;
+  border: 1px solid #007bff !important;
 }
 
 body.dark-mode .form-group h4 {

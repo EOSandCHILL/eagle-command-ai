@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import CommandCoreAiTransmissionComponent from "./components/CommandCoreAiTransmissionComponent";
 import CommandCoreAiWeatherComponent from "./components/CommandCoreAiWeatherComponent";
+import ThemeToggleButton from "./components/ThemeToggleButton";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -15,23 +16,26 @@ function App() {
 
   return (
     <div className="App">
-      <div className="App">
-        <button onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "☀ Light Mode" : "🌙 Dark Mode"}
+      <ThemeToggleButton
+        darkMode={darkMode}
+        toggleDarkMode={() => setDarkMode(!darkMode)}
+      />
+      <div>
+        <button
+          className={activeTab === "command-core-transmission" ? "active" : ""}
+          onClick={() => handleTabChange("command-core-transmission")}
+        >
+          Tactical Transmission
+        </button>
+        <button
+          className={
+            activeTab === "command-core-weather-report" ? "active" : ""
+          }
+          onClick={() => handleTabChange("command-core-weather-report")}
+        >
+          Weather Intel
         </button>
       </div>
-      <button
-        className={activeTab === "command-core-transmission" ? "active" : ""}
-        onClick={() => handleTabChange("command-core-transmission")}
-      >
-        Tactical Transmission
-      </button>
-      <button
-        className={activeTab === "command-core-weather-report" ? "active" : ""}
-        onClick={() => handleTabChange("command-core-weather-report")}
-      >
-        Weather Intel
-      </button>
       <div>
         {activeTab === "command-core-weather-report" && (
           <CommandCoreAiWeatherComponent />

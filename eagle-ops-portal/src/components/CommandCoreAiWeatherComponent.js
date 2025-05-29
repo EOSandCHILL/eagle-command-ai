@@ -162,7 +162,10 @@ function CommandCoreAiWeatherComponent() {
           <option value="Heavy">Heavy</option>
         </select>
       </div>
-      <button onClick={generateCommandCoreAiWeatherReport}>
+      <button
+        className="generate-button"
+        onClick={generateCommandCoreAiWeatherReport}
+      >
         Generate AI Weather Report
       </button>
       {weatherReport && (
