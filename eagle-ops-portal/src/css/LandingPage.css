@@ -1,0 +1,64 @@
+/* at the very top of LandingPage.css (or App.css) */
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+body {
+  font-family: "Share Tech Mono", monospace;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Stencilla&display=swap");
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: #0b0b0b; /* pure black background */
+  color: #397542; /* Army Green text */
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+}
+
+h1 {
+  font-family: "Stencilla", monospace;
+  font-size: 4rem;
+  margin: 0.5rem 0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.landing-tagline {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.features-list li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.launch-button {
+  border: 2px solid #397542;
+  background: transparent;
+  color: #397542;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-family: "Share Tech Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.launch-button:hover {
+  background-color: rgba(69, 75, 27, 0.1);
+}
