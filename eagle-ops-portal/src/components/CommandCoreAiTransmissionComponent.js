@@ -6,6 +6,7 @@ function CommandCoreAiTransmissionComponent() {
     commandCoreAiTransmissionResponse,
     setCommandCoreAiTransmissionResponse,
   ] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const askCommandCoreAiTransmission = async () => {
     try {
@@ -35,14 +36,29 @@ function CommandCoreAiTransmissionComponent() {
         placeholder="Transmit mission directive or query"
       />
       <button
-        className="generate-button"
+        className="transmission-generate-button"
         onClick={askCommandCoreAiTransmission}
       >
         Transmit to Command Core AI
       </button>
-      <div className="output">
-        <p>{commandCoreAiTransmissionResponse}</p>
-      </div>
+      {commandCoreAiTransmissionResponse && (
+        <div className="output">
+          <div className="output-header">
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  commandCoreAiTransmissionResponse
+                );
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }}
+            >
+              {copied ? "Copied!" : "Copy Response"}
+            </button>
+          </div>
+          <p>{commandCoreAiTransmissionResponse}</p>
+        </div>
+      )}
     </div>
   );
 }

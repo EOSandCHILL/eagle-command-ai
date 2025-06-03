@@ -17,8 +17,8 @@ function HelpModal({ onClose, activeTab }) {
           <p>
             Its purpose is to help users quickly draft tactical messages or
             reports using AI by filling in relevant details and clicking{" "}
-            <strong>Generate</strong>. The <strong>Copy</strong> button allows
-            for easy reuse of the output.
+            <strong>Transmit to Command Core AI</strong>. The{" "}
+            <strong>Copy</strong> button allows for easy reuse of the output.
           </p>
           <p>
             Think of it as your AI field radio — structured, fast, and

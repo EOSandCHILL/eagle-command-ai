@@ -12,7 +12,7 @@ function PowerDown({ onClose, onConfirm }) {
         <div className="modal-header">
           <h2>Power Down</h2>
         </div>
-        <p>Are you sure you want to power down the application?</p>
+        <p>Are you sure you want to power down Command Core AI?</p>
         <div className="powerdown-buttons">
           <button className="confirm-button" onClick={onConfirm}>
             Yes

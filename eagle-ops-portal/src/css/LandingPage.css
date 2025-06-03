@@ -43,8 +43,9 @@ h1 {
   margin-bottom: 2rem;
 }
 .features-list li {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin: 0.5rem 0;
+  text-transform: uppercase;
 }
 
 .launch-button {

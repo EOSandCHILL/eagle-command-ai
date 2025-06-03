@@ -163,7 +163,7 @@ function CommandCoreAiWeatherComponent() {
         </select>
       </div>
       <button
-        className="generate-button"
+        className="weather-generate-button"
         onClick={generateCommandCoreAiWeatherReport}
       >
         Generate Weather Intelligence Report

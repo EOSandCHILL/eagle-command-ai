@@ -320,6 +320,23 @@ body.dark-mode .powerdown-button:hover {
   outline: none;
 }
 
+.transmission-generate-button {
+  border-radius: 3px;
+  margin-top: 19px;
+}
+
+.weather-generate-button {
+  border-radius: 3px;
+}
+
+.weather-generate-button:hover,
+.transmission-generate-button:hover {
+  background-color: #397542;
+  filter: none;
+  transition: background-color 0.2s ease;
+  color: #fff;
+}
+
 :root {
   --background-color: #1a1a1a;
   --text-color: #00ff9c;
