@@ -41,7 +41,7 @@ function CommandCoreAiWeatherComponent() {
   return (
     <div>
       <div className="section-header">
-        <h2>Mission Weather Intel Report</h2>
+        <h2>Operational Weather Intelligence</h2>
       </div>
       <div className="form-group">
         <h4>Target Location</h4>
@@ -166,7 +166,7 @@ function CommandCoreAiWeatherComponent() {
         className="generate-button"
         onClick={generateCommandCoreAiWeatherReport}
       >
-        Generate AI Weather Report
+        Generate Weather Intelligence Report
       </button>
       {weatherReport && (
         <div className="output">

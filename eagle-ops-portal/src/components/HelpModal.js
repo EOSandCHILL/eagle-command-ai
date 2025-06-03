@@ -30,18 +30,18 @@ function HelpModal({ onClose, activeTab }) {
       return (
         <>
           <p>
-            The <strong>Weather Intel</strong> tab helps generate structured
-            weather intelligence reports for missions.
+            The <strong>Weather Intelligence</strong> tab helps generate
+            structured weather intelligence reports for missions.
           </p>
           <p>
             Its purpose is to gather mission-related environmental details and
             generate a readable weather report using AI. Just fill in the
-            inputs, click <strong>Generate</strong>, and use{" "}
+            inputs, click <strong>Generate AI Weather Report</strong>, and use{" "}
             <strong>Copy</strong> to save it.
           </p>
           <p>
             It acts like your virtual meteorologist for mission planning —
-            smart, detailed, and focused on intel.
+            smart, detailed, and focused on intelligence.
           </p>
         </>
       );
