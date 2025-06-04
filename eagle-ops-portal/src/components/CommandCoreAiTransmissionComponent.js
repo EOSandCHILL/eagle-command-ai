@@ -10,8 +10,9 @@ function CommandCoreAiTransmissionComponent() {
 
   const askCommandCoreAiTransmission = async () => {
     try {
+      console.log(`here: ${process.env.REACT_TRANSMISSION_API_URL}`);
       const response = await fetch(
-        `http://localhost:8080/command-core-transmission-options?prompt=${prompt}`
+        `/command-core-transmission-options?prompt=${prompt}`
       );
       const data = await response.text();
       console.log(data);

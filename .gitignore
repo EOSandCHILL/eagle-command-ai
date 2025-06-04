@@ -3,9 +3,9 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+.env
 
 # Ignore config files with sensitive env placeholders
-**/application.properties
 **/application.yml
 
 ### STS ###

@@ -14,8 +14,9 @@ function CommandCoreAiWeatherComponent() {
 
   const generateCommandCoreAiWeatherReport = async () => {
     try {
+      console.log(`here: ${process.env.REACT_WEATHER_API_URL}`);
       const response = await fetch(
-        `http://localhost:8080/command-core-ai-weather-report?location=${encodeURIComponent(
+        `/command-core-ai-weather-report?location=${encodeURIComponent(
           location
         )}&missionType=${encodeURIComponent(
           missionType
