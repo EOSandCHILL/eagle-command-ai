@@ -30,11 +30,21 @@ function CommandCoreAiTransmissionComponent() {
       <div className="section-header">
         <h2>Command Core AI - Transmission</h2>
       </div>
-      <input
-        type="text"
+      <textarea
+        className="transmission-textarea"
         value={prompt}
-        onChange={(e) => setPrompt(e.target.value)}
+        onChange={(e) => {
+          setPrompt(e.target.value);
+          e.target.style.height = "auto";
+          e.target.style.height = `${e.target.scrollHeight}px`;
+        }}
         placeholder="Transmit mission directive or query"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            askCommandCoreAiTransmission();
+          }
+        }}
       />
       <button
         className="transmission-generate-button"
